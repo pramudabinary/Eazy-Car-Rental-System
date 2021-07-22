@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eazy Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+<body style="background-image: url(assets/car.jpeg)">
+
+<!--Nav Section-->
+<nav class="navbar navbar-expand-lg" style="background: #2c3e50">
+    <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">Eazy Car Rental</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" id="btnHome" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" id="btnPay" href="#">Payment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" id="btnCars" href="#">Cars</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" id="btnBook" href="#">Book</a>
+                </li>
+            </ul>
+
+            <button class="btn  me-2 btn-outline-dark text-light" id="btnSupport" type="button">Support</button>
+            <button class="btn  me-2 btn-outline-dark text-light" id="btnSignUp" type="button">Sign Up</button>
+            <button class="btn  me-2 btn-outline-dark text-light" id="btnSignIn" type="button">Sign In</button>
+            <button class="btn  btn-outline-dark text-light" href="#loginform" id="btnLogOut" type="button">LogOut</button>
+        </div>
+    </div>
+</nav>
+<!--End Nav Section-->
+
+<!--Home Section-->
+<section id="home">
+    <div class="container">
+        <h1 class="text-light">Eazy Car Rental</h1>
+        <a class="opebBtn btn btn-danger h-50 mt-3"  href="#">Lets Go</a>
+    </div>
+</section>
+<!--End Home Section-->
+
+<!--SignUp Section-->
+<section id="register">
+    <div class="cards">
+        <div class="card-body">
+            <div class="mt-4">
+                <h1 class="text-center link-light">SIGN UP FORM</h1>
+                <h4 class="text-center link-light">Eazy Car Rental</h4>
+            </div>
+            <form class="formLogin mt-2">
+                <div class="mb-3">
+                    <label class="form-label link-light" for="customerId">Customer ID</label>
+                    <input  class="form-control form-control-sm" name="id" id="customerId" type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label link-light" for="customerName">Name</label>
+                    <input  class="form-control form-control-sm" name="name" id="customerName" type="text">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label link-light" for="customerAddress">Address</label>
+                    <input class="form-control form-control-sm" name="address" id="customerAddress" type="text">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label link-light" for="email">Email address</label>
+                    <input class="form-control form-control-sm" id="email" name="email" type="email">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label link-light" for="password">New Password</label>
+                    <input class="form-control form-control-sm" id="password" name="password" type="password">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label link-light" for="nicNum">NIC Number</label>
+                    <input class="form-control form-control-sm" id="nicNum" name="nic" type="number">
+                    <input type="file">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label link-light" for="contact">Contact Number</label>
+                    <input class="form-control form-control-sm" id="contact" name="contact" type="number">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label link-light" for="license">Driving License Number</label>
+                    <input class="form-control form-control-sm" id="license" name="license" type="number">
+                    <input class="w-75" type="file">
+                </div>
+
+                <div class="btnsLogin">
+                    <div>
+                        <button class="btnSignup btn btn-primary text-center w-50" type="button" id="btnRegister">SignUp</button>
+                    </div>
+                    <div class="m-2">
+                        <a class="link-light" href="">Already have an account?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!--SignUp End Section-->
+
+<!--SignIn  Section-->
+<section id="loginform">
+    <div class="cardd">
+        <div class="card-body">
+            <div class="mt-4">
+                <h1 class="text-center link-light">LOGIN FORM</h1>
+                <h4 class="text-center link-light">Eazy Car Rental</h4>
+            </div>
+            <form class="formLogin mt-5">
+                <div class="mb-3">
+                    <label class="form-label link-light" for="exampleInputEmail1">Email address</label>
+                    <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1" type="email">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label link-light" for="exampleInputPassword1">Password</label>
+                    <input class="form-control" id="exampleInputPassword1" type="password">
+                </div>
+                <div class="btnsLogin">
+                    <div class="">
+                        <a class="submitLogin btn btn-primary text-center w-100"  id="loginBtn"  type="submit">Submit</a>
+                    </div>
+                    <div class="m-2">
+                        <a href="" class="text-light">Forget Password?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!--SignIn End Section-->
+<!--DashBoard Section-->
+<section id="dashboard">
+
+</section>
+<!--DashBoard End Section-->
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/app2.js"></script>
+<script>
+    $("#btnRegister").click(function (){
+
+        let customerID = $("#customerId").val();
+        let customerName = $("#customerName").val();
+        let customerAddress = $("#customerAddress").val();
+        let customerEmail = $("#email").val();
+        let customerPassword = $("#password").val();
+        let customerNIC = $("#nicNum").val();
+        let customerContact = $("#contact").val();
+        let customerLicense = $("#license").val();
+
+
+        $.ajax({
+            method: "POST",
+            url: "http://localhost:8080/Backend_war/api/v1/customer",
+            contentType: 'application/json',
+            async: true,
+            data: JSON.stringify({
+                id: customerID,
+                name: customerName,
+                address: customerAddress,
+                email: customerEmail,
+                password: customerPassword,
+                nic: customerNIC,
+                contact: customerContact,
+                license: customerLicense,
+            }),
+            success: function (data) {
+                console.log(data);
+            }
+
+        })
+    })
+
+</script>
+
+</body>
+</html>
