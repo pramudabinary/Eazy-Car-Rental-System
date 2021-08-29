@@ -53,8 +53,7 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDTO findCustomerByEmailAndPassword(String email, String password) {
         Optional<Customer> customer = customerRepo.findCustomerByEmailAndPassword(email, password);
         if (customer.isPresent()) {
-            Customer customer1 = customer.get();
-            return new CustomerDTO(customer1.getEmail(), customer1.getPassword());
+            return mapper.map(customer.get(),CustomerDTO.class);
         }
         return null;
     }

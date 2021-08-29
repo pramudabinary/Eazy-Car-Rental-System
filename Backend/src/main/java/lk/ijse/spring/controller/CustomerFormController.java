@@ -19,8 +19,8 @@ public class CustomerFormController {
 
     }
 
-    @GetMapping(path = "/login/")
-    public CustomerDTO loginCustomer(@RequestBody CustomerDTO dto) {
+    @PostMapping(path = "/login")
+    public CustomerDTO findCustomerByEmailAndPassword(@RequestBody CustomerDTO dto) {
         if (!dto.getEmail().equals("") && !dto.getPassword().equals("")) {
             CustomerDTO customer = service.findCustomerByEmailAndPassword(dto.getEmail(), dto.getPassword());
         }

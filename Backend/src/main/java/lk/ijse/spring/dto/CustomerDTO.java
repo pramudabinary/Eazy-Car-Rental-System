@@ -17,8 +17,4 @@ public class CustomerDTO {
     private String nic;
     private String contact;
     private String license;
-
-    public CustomerDTO(String email, String password) {
-
-    }
 }
