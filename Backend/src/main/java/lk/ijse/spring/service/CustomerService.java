@@ -14,4 +14,6 @@ public interface CustomerService {
     ArrayList<CustomerDTO> getAllCustomers();
 
     void updateCustomer(CustomerDTO dto);
+
+    CustomerDTO findCustomerByEmailAndPassword(String email,String Password);
 }

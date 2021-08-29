@@ -1,5 +1,6 @@
 package lk.ijse.spring.dto;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,4 +17,8 @@ public class CustomerDTO {
     private String nic;
     private String contact;
     private String license;
+
+    public CustomerDTO(String email, String password) {
+
+    }
 }

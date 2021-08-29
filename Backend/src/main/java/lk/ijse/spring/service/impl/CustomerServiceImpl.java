@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -46,5 +47,15 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void updateCustomer(CustomerDTO dto) {
 
+    }
+
+    @Override
+    public CustomerDTO findCustomerByEmailAndPassword(String email, String password) {
+        Optional<Customer> customer = customerRepo.findCustomerByEmailAndPassword(email, password);
+        if (customer.isPresent()) {
+            Customer customer1 = customer.get();
+            return new CustomerDTO(customer1.getEmail(), customer1.getPassword());
+        }
+        return null;
     }
 }

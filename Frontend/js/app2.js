@@ -40,14 +40,6 @@ $('#btnLogOut').click(function () {
     $("#btnSignIn").css('display', 'block');
 });
 
-$('#loginBtn').click(function () {
-    hideAll();
-    $("#btnSupport").css('display', 'block');
-    $("#btnLogOut").css('display', 'block');
-    $("#btnCars").css('display', 'block');
-    $("#btnPay").css('display', 'block');
-    $("#btnBook").css('display', 'block');
-});
 
 function hideAll() {
     $("#btnHome, #btnCars ,#btnPay,#btnBook,#btnSupport,#btnSignIn,#btnSignUp,#btnLogOut").css('display', "none");
