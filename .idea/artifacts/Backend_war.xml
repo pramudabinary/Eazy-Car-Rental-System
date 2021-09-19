@@ -9,11 +9,6 @@
     </properties>
     <root id="archive" name="Backend-1.0.0.war">
       <element id="artifact" artifact-name="Backend:war exploded" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="classes">
-          <element id="jpa-descriptors" facet="Backend/jpa/JPA" />
-        </element>
-      </element>
     </root>
   </artifact>
 </component>

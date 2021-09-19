@@ -1,11 +1,12 @@
 package lk.ijse.spring.service;
 
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.util.StandardResponse;
 
 import java.util.ArrayList;
 
 public interface CustomerService {
-    boolean addCustomer(CustomerDTO dto);
+    void addCustomer(CustomerDTO dto);
 
     void deleteCustomer(String id);
 

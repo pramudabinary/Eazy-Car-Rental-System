@@ -2,6 +2,7 @@ package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.entity.Customer;
+import lk.ijse.spring.exception.ValidateException;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.service.CustomerService;
 import org.modelmapper.ModelMapper;
@@ -21,12 +22,11 @@ public class CustomerServiceImpl implements CustomerService {
     private ModelMapper mapper;
 
     @Override
-    public boolean addCustomer(CustomerDTO dto) {
-    if(customerRepo.existsById(dto.getNic())){
-        throw new RuntimeException("Customer Already Exist");
-    }
-    customerRepo.save(mapper.map(dto, Customer.class));
-    return true;
+    public void addCustomer(CustomerDTO dto) {
+        if (customerRepo.existsById(dto.getId())) {
+            throw new ValidateException("Customer Already Exist");
+        }
+        customerRepo.save(mapper.map(dto, Customer.class));
     }
 
     @Override
@@ -53,8 +53,9 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDTO findCustomerByEmailAndPassword(String email, String password) {
         Optional<Customer> customer = customerRepo.findCustomerByEmailAndPassword(email, password);
         if (customer.isPresent()) {
-            return mapper.map(customer.get(),CustomerDTO.class);
+            return mapper.map(customer.get(), CustomerDTO.class);
         }
         return null;
+
     }
 }

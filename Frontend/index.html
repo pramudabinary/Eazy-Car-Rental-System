@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Eazy Car Rental</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="sweetalert2.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
 <body style="background-image: url(assets/car.jpeg)">
 
@@ -15,29 +14,31 @@
 <nav class="navbar navbar-expand-lg" style="background: #2c3e50">
     <div class="container-fluid">
         <a class="navbar-brand text-light" href="#">Eazy Car Rental</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" id="btnHome" href="#">Home</a>
+                    <a aria-current="page" class=" nav-link active text-light" href="#" id="btnHome">Home</a>
                 </li>
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link active text-light" aria-current="page" id="btnPay" href="#">Payment</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link active text-light" aria-current="page" id="btnCars" href="#">Cars</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link active text-light" aria-current="page" id="btnBook" href="#">Book</a>-->
-<!--                </li>-->
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-light" href="#" id="btnPay">Payment</a>
+                </li>
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-light" href="#" id="btnCars">Cars</a>
+                </li>
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-light" href="#" id="btnBook">Book</a>
+                </li>
             </ul>
 
-            <button class="btn  me-2 btn-outline-dark text-light" id="btnSupport" type="button">Support</button>
-            <button class="btn  me-2 btn-outline-dark text-light" id="btnSignUp" type="button">Sign Up</button>
-            <button class="btn  me-2 btn-outline-dark text-light" id="btnSignIn" type="button">Sign In</button>
-<!--            <button class="btn  btn-outline-dark text-light" href="#loginform" id="btnLogOut" type="button">LogOut</button>-->
+            <a class="btn  me-2 btn-outline-dark text-light" id="btnSupport">Support</a>
+            <a class="btn  me-2 btn-outline-dark text-light" id="btnSignUp">Sign Up</a>
+            <a class="btn  me-2 btn-outline-dark text-light" id="btnSignIn">Sign In</a>
+            <a class="btn  btn-outline-dark text-light" id="btnLogOut">LogOut</a>
+
         </div>
     </div>
 </nav>
@@ -47,7 +48,22 @@
 <section id="home">
     <div class="container">
         <h1 class="text-light">Eazy Car Rental</h1>
-        <a class="opebBtn btn btn-danger h-50 mt-3"  href="#">Lets Go</a>
+        <div class="hero">
+            <div class="highway">
+                <div class="car">
+                    <img alt="" src="assets/car.png">
+                </div>
+                <div class="wheels">
+                    <img alt="" class="back-wheel" src="assets/wheel.png">
+                    <img alt="" class="front-wheel"
+                         src="assets/wheel.png">
+                </div>
+            </div>
+
+
+        </div>
+        <div><a class="opebBtn btn btn-danger h-50 mt-3"  href="#">Lets Go</a></div>
+
     </div>
 </section>
 <!--End Home Section-->
@@ -60,47 +76,49 @@
                 <h1 class="text-center link-light">SIGN UP FORM</h1>
                 <h4 class="text-center link-light">Eazy Car Rental</h4>
             </div>
-            <form method="post" enctype="utf8" class="formLogin mt-2" >
+            <form class="formLogin mt-2" enctype="utf8" method="post">
                 <div class="column">
-                <div class="mb-3">
-                    <label  class="form-label link-light" for="customerId">Customer ID</label>
-                    <input  class="form-control form-control-sm" name="id" id="customerId" type="text">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label link-light" for="customerName">Name</label>
-                    <input  class="form-control form-control-sm" name="name" id="customerName" type="text">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label link-light" for="customerAddress">Address</label>
-                    <input class="form-control form-control-sm" name="address" id="customerAddress" type="text">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label link-light" for="email">Email address</label>
-                    <input class="form-control form-control-sm" id="email" name="email" type="email">
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label link-light" for="customerId">Customer ID</label>
+                        <input class="form-control form-control-sm" id="customerId" name="id" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label link-light" for="customerName">Name</label>
+                        <input class="form-control form-control-sm" id="customerName" name="name" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label link-light" for="customerAddress">Address</label>
+                        <input class="form-control form-control-sm" id="customerAddress" name="address" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label link-light" for="email">Email address</label>
+                        <input class="form-control form-control-sm" id="email" name="email" type="email">
+                    </div>
                 </div>
                 <div class="column">
-                <div class="mb-3">
-                    <label class="form-label link-light" for="password">New Password</label>
-                    <input class="form-control form-control-sm" id="password" name="password" type="password">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label link-light" for="nicNum">NIC Number</label>
-                    <input class="form-control form-control-sm" id="nicNum" name="nic" type="number">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label link-light" for="contact">Contact Number</label>
-                    <input class="form-control form-control-sm" id="contact" name="contact" type="number">
-                </div>
-                <div class="mb-2">
-                    <label class="form-label link-light" for="license">Driving License Number</label>
-                    <input class="form-control form-control-sm" id="license" name="license" type="number">
-                    <input class="w-75" type="file"id="file">
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label link-light" for="password">New Password</label>
+                        <input class="form-control form-control-sm" id="password" name="password" type="password">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label link-light" for="nicNum">NIC Number</label>
+                        <input class="form-control form-control-sm" id="nicNum" name="nic" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label link-light" for="contact">Contact Number</label>
+                        <input class="form-control form-control-sm" id="contact" name="contact" type="number">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label link-light" for="license">Driving License Number</label>
+                        <input class="form-control form-control-sm" id="license" name="license" type="number">
+                        <input class="w-75" id="file" type="file">
+                    </div>
                 </div>
                 <div class="btnsLogin">
                     <div>
-                        <button class="btnSignup btn btn-primary text-center w-50" type="button" id="btnRegister">SignUp</button>
+                        <button class="btnSignup btn btn-primary text-center w-50" id="btnRegister" type="button">
+                            SignUp
+                        </button>
                     </div>
                     <div>
                         <a class="link-light mb-2" href="">Already have an account?</a>
@@ -120,23 +138,23 @@
                 <h1 class="text-center link-light">LOGIN FORM</h1>
                 <h4 class="text-center link-light">Eazy Car Rental</h4>
             </div>
-            <form class="formLogin mt-5" method="post" name="form" onsubmit="return validated()">
+            <form class="formLogin mt-5" method="post" name="form">
                 <div class="mb-3">
                     <label class="form-label link-light" for="exampleInputEmail1">Email address</label>
-                    <input autocomplete="off" aria-describedby="emailHelp" name="email" class="form-control" id="exampleInputEmail1" type="email">
-                    <div id="email_error">Please Fill Up your email</div>
+                    <input aria-describedby="emailHelp" autocomplete="off" class="form-control" id="exampleInputEmail1"
+                           name="email" type="email">
                 </div>
                 <div class="mb-3">
                     <label class="form-label link-light" for="exampleInputPassword1">Password</label>
                     <input class="form-control" id="exampleInputPassword1" name="password" type="password">
-                    <div id="password_error">Please Fill Up your password</div>
                 </div>
                 <div class="btnsLogin">
                     <div class="">
-                        <a class="submitLogin btn btn-primary text-center w-100"  id="loginBtn"  type="submit">Sign In</a>
+                        <a class="submitLogin btn btn-primary text-center w-100" href="#dashboard" id="loginBtn"
+                           type="submit">Sign In</a>
                     </div>
                     <div class="m-2">
-                        <a href="" class="text-light">Forget Password?</a>
+                        <a class="text-light" href="">Forget Password?</a>
                     </div>
                 </div>
             </form>
@@ -144,6 +162,7 @@
     </div>
 </section>
 <!--SignIn End Section-->
+
 <!--DashBoard Section-->
 <section id="dashboard">
 
@@ -152,139 +171,10 @@
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
-<!--<script src="js/app2.js"></script>-->
-<script src="js/valid.js"></script>
+<script src="js/controls.js"></script>
+<script src="js/ajax.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="sweetalert2.all.min.js"></script>
 <script src="sweetalert2.min.js"></script>
-<script type="text/javascript">
-    function validation(){
-     let email=  $("#email").val();
-     let password =  $("#password").val();
-
-     if((email==email) && (password==password)){
-         Swal.fire(
-             'Good Job!',
-             'Login Successful!',
-             'success'
-         );
-    }else{
-         Swal.fire({
-             icon: 'error',
-             title: 'Oops...',
-             text: 'email or password incorrect!',
-         })
-     }
-    }
-</script>
-<script type="text/javascript">
-    function registerValidation(){
-        let customerID = $("#customerId").val();
-        let customerName = $("#customerName").val();
-        let customerAddress = $("#customerAddress").val();
-        let customerEmail = $("#email").val();
-        let customerPassword = $("#password").val();
-        let customerNIC = $("#nicNum").val();
-        let customerContact = $("#contact").val();
-        let customerLicense = $("#license").val();
-
-
-        if((email==email) && (password==password)){
-            Swal.fire(
-                'Good Job!',
-                'You are now a new customer!',
-                'success'
-            );
-        }else{
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Something went to wrong!',
-            })
-        }
-    }
-</script>
-<script>
-    $("#btnRegister").click(function (){
-
-        let customerID = $("#customerId").val();
-        let customerName = $("#customerName").val();
-        let customerAddress = $("#customerAddress").val();
-        let customerEmail = $("#email").val();
-        let customerPassword = $("#password").val();
-        let customerNIC = $("#nicNum").val();
-        let customerContact = $("#contact").val();
-        let customerLicense = $("#license").val();
-
-
-        $.ajax({
-            method: "POST",
-            url: "http://localhost:8080/Backend_war/api/v1/customer",
-            contentType: 'application/json',
-            async: true,
-            data: JSON.stringify({
-                id: customerID,
-                name: customerName,
-                address: customerAddress,
-                email: customerEmail,
-                password: customerPassword,
-                nic: customerNIC,
-                contact: customerContact,
-                license: customerLicense,
-            }),
-            success: function (data) {
-                console.log(data);
-            }
-
-        })
-    })
-
-</script>
-<script>
-    $("#loginBtn").click(function (){
-
-        let customerEmail = $("#email").val();
-        let customerPassword = $("#password").val();
-
-        $.ajax({
-            method: "POST",
-            url: "http://localhost:8080/Backend_war/api/v1/customer/login",
-            contentType: 'application/json',
-            async: true,
-            data: JSON.stringify({
-                email: customerEmail,
-                password: customerPassword,
-                }),
-            success: function () {
-                if (true){
-                $("#dashboard").css('display', 'block');
-            }else{
-                    alert("Error");
-                }
-            }
-
-        })
-    })
-</script>
-<script>
-    var fileObject = $("#file")[0].files[0];//access file object from input field
-    var fileName = $("#file")[0].files[0].name; //get file name
-
-    var data = new FormData(); //setup form data object to send file data
-    data.append("file", fileObject, fileName); //append data
-
-    $.ajax({
-        url: 'up',
-        method: 'post',
-        async: true,
-        processData: false, //stop processing data of request body
-        contentType: false, // stop setting content type by jQuery
-        data: data,
-        success: function () {
-            alert("File Uploaded");
-        }
-    });
-</script>
 </body>
 </html>
