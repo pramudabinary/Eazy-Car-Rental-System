@@ -1,7 +1,9 @@
 package lk.ijse.spring.advisor;
 
+import lk.ijse.spring.exception.ApplicationException;
 import lk.ijse.spring.exception.NotFoundException;
 import lk.ijse.spring.exception.ValidateException;
+import lk.ijse.spring.util.StandardResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,17 +16,24 @@ public class AppWideExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity handleException(Exception e) {
-        return new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(new StandardResponse("500", "Error", e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity handleNotFoundException(NotFoundException e) {
-        return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity(new StandardResponse("404", "Error", e.getMessage()), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(ValidateException.class)
-    public ResponseEntity handleValidateException(ValidateException e) {
-        return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
+    public ResponseEntity handleValidationException(ValidateException e) {
+        return new ResponseEntity(new StandardResponse("400", "Error", e.getMessage()), HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(ApplicationException.class)
+    public ResponseEntity handleValidationException(ApplicationException e) {
+        return new ResponseEntity(new StandardResponse(e.getCode(), "Error", e.getMessage()), HttpStatus.BAD_REQUEST);
+    }
+
+
 
 }

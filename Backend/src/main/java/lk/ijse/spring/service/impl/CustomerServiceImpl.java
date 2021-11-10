@@ -1,13 +1,20 @@
 package lk.ijse.spring.service.impl;
 
+import lk.ijse.spring.dto.AdminDTO;
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.json.request.LoginRequestDTO;
+import lk.ijse.spring.entity.Admin;
 import lk.ijse.spring.entity.Customer;
+import lk.ijse.spring.exception.ApplicationException;
 import lk.ijse.spring.exception.ValidateException;
 import lk.ijse.spring.repo.CustomerRepo;
 import lk.ijse.spring.service.CustomerService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -18,6 +25,7 @@ import java.util.Optional;
 public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerRepo customerRepo;
+
     @Autowired
     private ModelMapper mapper;
 
@@ -50,12 +58,13 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public CustomerDTO findCustomerByEmailAndPassword(String email, String password) {
-        Optional<Customer> customer = customerRepo.findCustomerByEmailAndPassword(email, password);
-        if (customer.isPresent()) {
-            return mapper.map(customer.get(), CustomerDTO.class);
+    public CustomerDTO customerLogin(LoginRequestDTO loginRequestDTO) {
+        Optional<Customer> customerOptional = customerRepo.findCustomerByNameAndPassword(loginRequestDTO.getUsername(),
+                loginRequestDTO.getPassword());
+        if (customerOptional.isPresent()) {
+            return mapper.map(customerOptional.get(), CustomerDTO.class);
         }
-        return null;
 
+        throw new ApplicationException("401", "Incorrect username or password");
     }
 }

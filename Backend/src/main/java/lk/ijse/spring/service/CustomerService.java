@@ -1,9 +1,14 @@
 package lk.ijse.spring.service;
 
+import lk.ijse.spring.dto.AdminDTO;
 import lk.ijse.spring.dto.CustomerDTO;
-import lk.ijse.spring.util.StandardResponse;
+import lk.ijse.spring.dto.json.request.LoginRequestDTO;
+import lk.ijse.spring.entity.Customer;
+
 
 import java.util.ArrayList;
+import java.util.Optional;
+
 
 public interface CustomerService {
     void addCustomer(CustomerDTO dto);
@@ -16,5 +21,7 @@ public interface CustomerService {
 
     void updateCustomer(CustomerDTO dto);
 
-    CustomerDTO findCustomerByEmailAndPassword(String email,String Password);
+    CustomerDTO customerLogin(LoginRequestDTO loginRequestDTO);
+
+
 }
