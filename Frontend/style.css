@@ -6,87 +6,10 @@
 body {
     background-size: cover;
 }
-
+/*================================Home======================================*/
 #home {
     width: 100%;
-    height: 50vh;
-}
-
-#home .hero {
-    height: 40vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    bottom: 12vh;
-    overflow-x: hidden;
-}
-
-#home .highway {
-    height: 50px;
-    width: 100%;
-    display: block;
-    background-image: url("assets/road.jpg");
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
-#home .car {
-    width: 400px;
-    left: 49%;
-    bottom: 5px;
-    transform: translateX(-50%);
-    position: absolute;
-    z-index: 2;
-}
-
-#home .car img {
-    width: 100%;
-    animation: car 1s linear infinite;
-}
-
-@keyframes car {
-    100% {
-        transform: translateY(-1px);
-    }
-    50% {
-        transform: translateY(1px);
-    }
-    0% {
-        transform: translateY(-1px);
-    }
-}
-
-#home .wheels {
-    left: 49%;
-    bottom: 90px;
-    transform: translateX(-50%);
-    position: absolute;
-    z-index: 2;
-}
-
-#home .wheels img {
-    width: 72px;
-    height: 72px;
-    animation: wheel 1s linear infinite;
-}
-
-#home .back-wheel {
-    left: -165px;
-    position: absolute;
-}
-
-#home .front-wheel {
-    left: 80px;
-    position: absolute;
-}
-
-@keyframes wheel {
-    100% {
-        transform: rotate(360deg);
-    }
+    height: 42vh;
 }
 
 .container {
@@ -107,55 +30,36 @@ body {
     border-radius: 20px;
 }
 
+#home h1{
+    position: relative;
+    bottom: 25px;
+}
+#home .opebBtn{
+    position: relative;
+    bottom:5vh;
+    right: 24px;
+    /*width: 120%;*/
+    /*height: 18vh;*/
+}
+#home .opebBtn h1{
+
+}
+
+#home .opebBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+/*======================================Home End====================================================*/
+
+/*======================================Register====================================================*/
 #register {
     height: 40vh;
     width: 100%;
 }
 
-#dashboard {
-    min-height: 100vh;
-    width: 100%;
-}
-
-#loginform {
-    min-height: 84vh;
-    width: 100%;
-}
-
-.cardd {
-    margin: 40px auto;
-    align-content: center;
-    width: 25%;
-    height: 450px;
-    background: #0d6efd;
-    border-radius: 30px;
-}
-
-.btnsLogin {
-    margin-top: 35px;
-    text-align: center;
-}
-
-.cards {
-    margin: 40px auto;
-    align-content: center;
-    width: 45%;
-    height: 520px;
-    background: #0d6efd;
-    border-radius: 30px;
-    position: relative;
-    bottom: 14px;
-}
-
 #register .btnsLogin {
     text-align: center;
 }
-
-#loginform .submitLogin {
-    background-color: #0dcaf0;
-    border-radius: 20px;
-}
-
 #register .btnSignup {
     background-color: #0dcaf0;
     border-radius: 20px;
@@ -176,6 +80,45 @@ body {
     width: 50%;
 }
 
+/*======================================Register====================================================*/
+
+/*======================================DashBoard====================================================*/
+#dashboard {
+    min-height: 100vh;
+    width: 100%;
+}
+/*======================================DashBoard End====================================================*/
+
+/*======================================LoginForm====================================================*/
+#loginform {
+    min-height: 80vh;
+    width: 100%;
+}
+.cardd {
+    margin: 40px auto;
+    align-content: center;
+    width: 25%;
+    height: 454px;
+    background: #0d6efd;
+    border-radius: 30px;
+}
+
+.btnsLogin {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.cards {
+    margin: 40px auto;
+    align-content: center;
+    width: 45%;
+    height: 520px;
+    background: #0d6efd;
+    border-radius: 30px;
+    position: relative;
+    bottom: 14px;
+}
+
 #loginform #email_error,
 #loginform #password_error {
     margin-top: 5px;
@@ -189,6 +132,13 @@ body {
     border: 1px solid #EF9A9A;
     display: none;
 }
+
+#loginform .submitLogin {
+    background-color: #0dcaf0;
+    border-radius: 20px;
+}
+/*======================================End LoginForm====================================================*/
+
 
 .row {
     display: flex;
@@ -219,11 +169,32 @@ body {
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
-/*.cards:hover {*/
-/*    transform: scale(1.05);*/
-/*    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);*/
-/*}*/
-#home .opebBtn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+/*======================================Rental Car Guest====================================================*/
+
+/*General Cars*/
+
+#cars .cardds{
+    display: flex;
+    justify-content: center;
 }
+#cars .cardds .card{
+    margin-left: 40px;
+    width: 20%;
+    height: 240px;
+
+}
+#cars .cardds .cardd{
+    width: 20%;
+    height: 240px;
+
+}
+#cars .cardds .card-img{
+    object-fit: contain;
+}
+
+#cars .cardds .card a{
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+/*======================================End Rental Car Guest====================================================*/

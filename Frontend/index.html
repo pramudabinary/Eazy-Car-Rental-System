@@ -14,7 +14,8 @@
 <nav class="navbar navbar-expand-lg" style="background: #2c3e50">
     <div class="container-fluid">
         <a class="navbar-brand text-light" href="#">Eazy Car Rental</a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
                 data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,6 +24,9 @@
                 <li class="nav-item">
                     <a aria-current="page" class=" nav-link active text-light" href="#" id="btnHome">Home</a>
                 </li>
+
+                <!--                Customer Nav-->
+
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active text-light" href="#" id="btnPay">Payment</a>
                 </li>
@@ -32,6 +36,19 @@
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active text-light" href="#" id="btnBook">Book</a>
                 </li>
+
+                <!--                Admin Nav-->
+
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-light" href="#" id="cusManage">Customer Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-light" href="#" id="carManage">Car Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-light" href="#" id="bookManage">Booking Manage</a>
+                </li>
+
             </ul>
 
             <a class="btn  me-2 btn-outline-dark text-light" id="btnSupport">Support</a>
@@ -48,21 +65,11 @@
 <section id="home">
     <div class="container">
         <h1 class="text-light">Eazy Car Rental</h1>
-        <div class="hero">
-            <div class="highway">
-                <div class="car">
-                    <img alt="" src="assets/car.png">
-                </div>
-                <div class="wheels">
-                    <img alt="" class="back-wheel" src="assets/wheel.png">
-                    <img alt="" class="front-wheel"
-                         src="assets/wheel.png">
-                </div>
-            </div>
 
 
+        <div class="">
+            <button class="opebBtn btn btn-danger h-50 mt-3" id="btnHomeRent"><h2>Rent Your Car</h2></button>
         </div>
-        <div><a class="opebBtn btn btn-danger h-50 mt-3"  href="#">Lets Go</a></div>
 
     </div>
 </section>
@@ -121,7 +128,7 @@
                         </button>
                     </div>
                     <div>
-                        <a class="link-light mb-2" href="">Already have an account?</a>
+                        <button class="btn btn-link text-light mb-5" type="button" id="btnHave">Already have an account?</button>
                     </div>
                 </div>
             </form>
@@ -140,9 +147,9 @@
             </div>
             <form class="formLogin mt-5" method="post" name="form">
                 <div class="mb-3">
-                    <label class="form-label link-light" for="exampleInputEmail1">Email address</label>
-                    <input aria-describedby="emailHelp" autocomplete="off" class="form-control" id="exampleInputEmail1"
-                           name="email" type="email">
+                    <label class="form-label link-light" for="exampleInputUserName">User Name</label>
+                    <input aria-describedby="emailHelp" autocomplete="off" class="form-control" id="exampleInputUserName"
+                           name="username" type="text">
                 </div>
                 <div class="mb-3">
                     <label class="form-label link-light" for="exampleInputPassword1">Password</label>
@@ -150,8 +157,9 @@
                 </div>
                 <div class="btnsLogin">
                     <div class="">
-                        <a class="submitLogin btn btn-primary text-center w-100" href="#dashboard" id="loginBtn"
-                           type="submit">Sign In</a>
+                        <button class="submitLogin btn btn-primary text-center w-100" id="loginBtn"
+                                type="button">Sign In
+                        </button>
                     </div>
                     <div class="m-2">
                         <a class="text-light" href="">Forget Password?</a>
@@ -168,6 +176,136 @@
 
 </section>
 <!--DashBoard End Section-->
+
+
+<!--Car Rent Section Guest-->
+<section id="cars">
+    <!--General Cars-->
+
+    <h1 class="link-danger text-decoration-underline mb-4">General Cars</h1>
+
+    <div class="cardds">
+
+        <div class="card">
+            <div class="imgg card-img">
+                <img alt="" height="179px" src="assets/general%202.jpg" width="100%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+
+        </div>
+
+
+        <div class="card ">
+            <div class="img card-img">
+                <img alt="" src="assets/general%202.jpg" width="100%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+        </div>
+
+
+        <div class="card ">
+            <div class="img card-img">
+                <img alt="" height="179px" src="assets/general%203.jpg" width="100%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+        </div>
+
+    </div>
+
+    <!--Premium Cars-->
+
+    <h1 class="link-danger text-decoration-underline mt-5 mb-4">Premium Cars</h1>
+
+    <div class="cardds">
+
+        <div class="card">
+            <div class="image card-img">
+                <img alt="" height="179px" src="assets/premium%201.jpg" width="110%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+        </div>
+
+        <div class="card">
+            <div class="image card-img">
+                <img alt="" height="179px" src="assets/premium%201.jpg" width="110%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+        </div>
+
+
+        <div class="card">
+            <div class="image card-img">
+                <img alt="" height="179px" src="assets/premium%201.jpg" width="110%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <!--    Luxury Cars-->
+
+    <h1 class="link-danger text-decoration-underline mt-5 mb-4">Luxury Cars</h1>
+
+    <div class="cardds">
+
+        <div class="card">
+            <div class="imgg card-img">
+                <img alt="" height="179px" src="assets/luxury%203.jpg" width="130%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+        </div>
+
+        <div class="card">
+            <div class="image1 card-img">
+                <img alt="" height="179px" src="assets/luxury%203.jpg" width="90%">
+            </div>
+
+            <a class="btn bg-primary" href="#">Press Here</a>
+        </div>
+
+        <div class="card">
+            <div class="image1 card-img">
+                <img alt="" height="179px" src="assets/luxury.jpeg" width="90%">
+            </div>
+
+            <a class="btn bg-primary" href="">Press Here</a>
+        </div>
+    </div>
+</section>
+
+
+<!--Car Rent Section Guest End-->
+
+
+<!--Admin DashBoard-->
+
+<section id="admin">
+
+    <div>
+        <div class="registerd_users"></div>
+        <div class="total_bookings"></div>
+        <div class="available_cars"></div>
+        <div class="reserved_cars"></div>
+        <div class="active_bookings"></div>
+        <div class="occumplished_cars"></div>
+        <div class="maintenance_and_under_maintenance_cars"></div>
+    </div>
+
+
+</section>
+
+
+<!--Admin DashBoard End-->
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
