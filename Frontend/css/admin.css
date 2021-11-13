@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*==================================Nav Bar==================================================*/
+
+#nav-bar {
+    width: 100%;
+    height: 65px;
+    background: #282828;
+}
+
+#nav-bar .container {
+    display: grid;
+}
+
+#nav-bar .title {
+    margin: 5px 0 0 20px;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    width: 400px;
+}
+
+#nav-bar .title h1 {
+    color: white;
+}
+
+#nav-bar .title h1:hover {
+    color: crimson;
+}
+
+#nav-bar .fields {
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 13px;
+    color: white;
+}
+
+#nav-bar .fields a {
+    color: white;
+}
+
+#nav-bar .fields a:hover {
+    color: #81ecec;
+}
+#nav-bar .fields a  {;
+    margin-left: 10px;
+}
+#nav-bar .fields #btnBooking{
+    margin-right: 10px;
+}
+#nav-bar .fields .logout {
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 10px 0 15px;
+    background: #81ecec;
+    font-weight: bold;
+}
+
+#nav-bar .fields .logout:hover {
+    background: #74b9ff;
+}
+/*==================================End Nav Bar==================================================*/

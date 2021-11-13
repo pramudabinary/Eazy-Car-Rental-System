@@ -47,6 +47,16 @@ $("#btnHave").click(function () {
     $("#admin").css("display", "none");
 })
 
+
+$("#btnNew").click(function () {
+    $("#home").css("display", "none");
+    $("#register").css("display", "block");
+    $("#loginform").css("display", "none");
+    $("#dashboard").css("display", "none");
+    $("#cars").css("display", "none");
+    $("#admin").css("display", "none");
+})
+
 function hideAll() {
     $("#home, #cars ,admin, #loginform ,#register,#dashboard").css('display', "none");
 }
