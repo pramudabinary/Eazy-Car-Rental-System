@@ -20,7 +20,7 @@
     <div class="container d-grid">
 
         <div class="title">
-            <a href=""><h1>Eazy Car Rental</h1></a>
+            <a href="#" id="btnAdminHomeTitle"><h1>Eazy Car Rental</h1></a>
         </div>
 
         <div class="fields">
@@ -33,7 +33,146 @@
 
     </div>
 </section>
+<!--End Nav Bar-->
+
+<!--DashBoard Section-->
+<section id="dashboard_admin">
 
 
+</section>
+<!--End DashBoard Section-->
+
+
+<!--Customer Section-->
+<section id="customer">
+    <div class="title">
+        <h1>Customer MANAGE</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="col">
+            <div class="table">
+                <table id="customer_admin_table">
+                    <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>NIC</th>
+                        <th>Contact</th>
+                        <th>License</th>
+                        <th>Option</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customer_admin_tbody">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Customer Section-->
+
+
+<!--Driver Section-->
+<section id="driver">
+    <div class="title">
+        <h1>DRIVER MANAGE</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="col1">
+
+            <div class="form">
+                <div class="form-control">
+                    <input autocomplete="off" id="inputUserId"
+                           name="id"
+                           placeholder="Driver ID" type="text">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="form-control">
+                    <input autocomplete="off" id="inputName" name="name"
+                           placeholder=" Driver Name" type="text">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+
+                <div class="form-control">
+                    <input autocomplete="off" id="inputAddress"
+                           name="address"
+                           placeholder="Address" type="text">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+
+                <div class="form-control">
+                    <input autocomplete="off" id="inputEmail"
+                           name="email"
+                           placeholder="Email" type="text">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+
+
+                <div class="form-control">
+                    <input autocomplete="off" id="inputLicense"
+                           name="license"
+                           placeholder="License" type="number">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+
+                <div class="form-control">
+                    <input autocomplete="off" id="inputPassword" name="password"
+                           placeholder=" Password" type="password">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+
+
+            </div>
+
+            <div class="buttons">
+                <button class="btn" id="btnDriverSave" type="button">Add</button>
+                <button class="btn" id="btnDriverUpdate" type="button">Update</button>
+                <button class="btn" id="btnDriverDelete" type="button">Delete</button>
+                <button class="btn" id="btnDriverClear" type="reset">Clear</button>
+            </div>
+        </div>
+
+        <div class="col2">
+            <div class="table">
+                <table id="admin_table">
+                    <thead>
+                    <tr>
+                        <th>Admin ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Driver Section-->
+
+
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/AdminControl.js"></script>
 </body>
 </html>

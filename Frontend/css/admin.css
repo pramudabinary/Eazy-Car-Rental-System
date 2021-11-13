@@ -13,6 +13,13 @@ a {
     text-decoration: none;
 }
 
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("../assets/patrick-tomasso-CP1cKFIl7qc-unsplash.jpg");
+    background-position: center;
+}
+
+
 /*==================================Nav Bar==================================================*/
 
 #nav-bar {
@@ -33,11 +40,11 @@ a {
 }
 
 #nav-bar .title h1 {
-    color: white;
+    color: crimson;
 }
 
 #nav-bar .title h1:hover {
-    color: crimson;
+    color: #81ecec;
 }
 
 #nav-bar .fields {
@@ -56,12 +63,15 @@ a {
 #nav-bar .fields a:hover {
     color: #81ecec;
 }
-#nav-bar .fields a  {;
+
+#nav-bar .fields a {;
     margin-left: 10px;
 }
-#nav-bar .fields #btnBooking{
+
+#nav-bar .fields #btnBooking {
     margin-right: 10px;
 }
+
 #nav-bar .fields .logout {
     width: 110px;
     height: 40px;
@@ -75,4 +85,158 @@ a {
 #nav-bar .fields .logout:hover {
     background: #74b9ff;
 }
+
 /*==================================End Nav Bar==================================================*/
+
+
+/*==================================DashBoard==================================================*/
+#dashboard_admin {
+    height: 89vh;
+    width: 99%;
+}
+
+
+/*==================================End DashBoard==================================================*/
+
+/*==================================Customer Section==================================================*/
+#customer {
+    height: 89vh;
+    width: 99%;
+}
+
+#customer .title {
+    text-align: center;
+    font-size: 30px;
+    color: #ff7675;
+    font-family: 'Rampart One', cursive;
+}
+
+
+#customer .col {
+    margin: 48px 0 0 20px;
+}
+
+#customer .table table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    font-size: 22px;
+}
+
+#customer .table table th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+#customer .table table th{
+    color: white;
+}
+
+#customer .table table tbody tr:hover {
+    background-color: #81ecec;
+}
+/*==================================End Customer Section==================================================*/
+
+/*==================================Driver Section==================================================*/
+
+#driver {
+    height: 89vh;
+    width: 99%;
+}
+
+#driver .title {
+    text-align: center;
+    font-size: 30px;
+    color: #ff7675;
+    font-family: 'Rampart One', cursive;
+}
+
+#driver .form {
+    padding: 30px 40px;
+    margin: 33px 40px 0 30px;
+}
+
+#driver .form .form-control {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+#driver .form .form-control input {
+    border: 2px solid #f0f0f0;
+    width: 300px;
+    height: 38px;
+    border-radius: 10px;
+    display: block;
+}
+
+#driver .form .form-control.success input {
+    border-color: #2ecc71;
+}
+
+#driver .form .form-control.error input {
+    border-color: #e74c3c;
+}
+
+#driver .form .form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+#driver .form .form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+#driver .form .form-control i {
+    position: absolute;
+    top: 15px;
+    right: 14px;
+    visibility: hidden;
+}
+
+#driver .buttons {
+    margin: -08px 0 0 15px;
+
+}
+
+#driver .buttons .btn {
+    width: 95px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    background: #81ecec;
+    font-weight: bold;
+}
+
+#driver .container {
+    display: flex;
+}
+
+
+#driver .col1 {
+    flex-direction: column;
+}
+
+#driver .col2 {
+    /*display: grid;*/
+    /*flex-direction: column;*/
+    margin: 48px 0 0 20px;
+    /*width: 60%;*/
+}
+
+#driver .table table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 22px;
+}
+
+#driver .table table th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#driver .table table tbody tr:hover {
+    background-color: #81ecec;
+}
